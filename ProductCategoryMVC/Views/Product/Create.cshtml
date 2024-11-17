@@ -1,0 +1,22 @@
+@model IEnumerable<ProductCategoryMVC.Models.Product>
+
+<h2>Products</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>Category Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.ProductName</td>
+            <td>@product.Category.CategoryName</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<!-- Add pagination logic here (manual pagination or use a pagination library) -->
